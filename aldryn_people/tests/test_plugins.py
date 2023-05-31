@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.urls import reverse
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 
 from cms import api
 from cms.utils.i18n import force_language
@@ -22,7 +22,7 @@ class TestPersonPlugins(DefaultApphookMixin, BasePeopleTest):
         Person.objects.create(name=name)
         plugin = api.add_plugin(self.placeholder, PeoplePlugin, self.language)
         plugin.people.set(Person.objects.all())
-        self.assertEqual(force_text(plugin), force_text(plugin.pk))
+        self.assertEqual(force_str(plugin), force_str(plugin.pk))
         self.page.publish(self.language)
 
         url = self.page.get_absolute_url()

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.test import TransactionTestCase
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import override
 
 from . import BasePeopleTest, DefaultApphookMixin
@@ -26,7 +26,7 @@ class TestBasicPeopleModels(DefaultApphookMixin, BasePeopleTest):
     def test_str(self):
         name = 'Person Str'
         person = Person.objects.create(name=name)
-        self.assertEqual(force_text(person), name)
+        self.assertEqual(force_str(person), name)
 
     def test_absolute_url(self):
         slug = 'person-slug'
@@ -237,11 +237,11 @@ class TestGroupModelTranslation(BasePeopleTest):
     def test_str(self):
         group1 = self.reload(self.group1, 'en')
         self.assertEqual(
-            force_text(group1),
+            force_str(group1),
             self.data['group1']['en']['name'],
         )
         group1 = self.reload(self.group1, 'de')
         self.assertEqual(
-            force_text(group1),
+            force_str(group1),
             self.data['group1']['de']['name'],
         )

@@ -6,7 +6,7 @@ import warnings
 from django.conf import settings
 from django.db import models
 from django.urls import NoReverseMatch, reverse
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import override, gettext_lazy as _
 
 from cms.models.pluginmodel import CMSPlugin
@@ -201,7 +201,7 @@ class Person(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
             ext = self.visual.extension.upper()
             try:
                 with open(self.visual.path, 'rb') as f:
-                    data = force_text(base64.b64encode(f.read()))
+                    data = force_str(base64.b64encode(f.read()))
                     vcard.add_line('PHOTO', data, TYPE=ext, ENCODING='b')
             except IOError:
                 if request:
