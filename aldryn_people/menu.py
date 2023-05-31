@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
-
 from django.urls import NoReverseMatch
 from django.utils.translation import get_language_from_request, ugettext as _
 

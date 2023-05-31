@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.db import models, migrations
 import djangocms_text_ckeditor.fields
 import aldryn_common.admin_fields.sortedm2m

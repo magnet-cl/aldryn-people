@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-
-from __future__ import unicode_literals
-
 from django.http import Http404
 from django.test.client import RequestFactory
 from django.urls import reverse

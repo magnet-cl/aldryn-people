@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-
-from __future__ import unicode_literals
-
 from aldryn_people.search_indexes import PeopleIndex
 
 from . import BasePeopleTest
