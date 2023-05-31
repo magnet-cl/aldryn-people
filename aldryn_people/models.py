@@ -7,7 +7,7 @@ from django.conf import settings
 from django.db import models
 from django.urls import NoReverseMatch, reverse
 from django.utils.encoding import force_text
-from django.utils.translation import override, ugettext_lazy as _
+from django.utils.translation import override, gettext_lazy as _
 
 from cms.models.pluginmodel import CMSPlugin
 from cms.utils.i18n import get_current_language, get_default_language
