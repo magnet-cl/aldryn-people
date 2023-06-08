@@ -1,6 +1,14 @@
 Changelog
 =========
 
+
+2.3.0b2
+==================
+* Django 3.2 support
+* Drop Django < 2.2
+* Drop Python < 3.6
+* Migrations for new parler versions
+
 2.2.0 (2018-12-21)
 ==================
 
